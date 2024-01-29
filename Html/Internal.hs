@@ -2,15 +2,15 @@
 
 module Html.Internal where
 
--- * Types
+import Markup (Structure)
+
+-- Types
 
 newtype Html = Html String
 
-newtype Structure = Structure String
-
 type Title = String
 
--- * EDSL
+-- EDSL
 
 html_ :: Title -> Structure -> Html
 html_ title content =
@@ -43,14 +43,14 @@ append_ :: Structure -> Structure -> Structure
 append_ c1 c2 =
   Structure (getStructureString c1 <> getStructureString c2)
 
--- * Render
+-- Render
 
 render :: Html -> String
 render html =
   case html of
     Html str -> str
 
--- * Utilities
+-- Utilities
 
 el :: String -> String -> String
 el tag content =
