@@ -2,11 +2,11 @@
 
 module Html.Internal where
 
-import Markup (Structure)
-
 -- Types
 
 newtype Html = Html String
+
+newtype Structure = Structure String
 
 type Title = String
 
