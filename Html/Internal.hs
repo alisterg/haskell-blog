@@ -39,9 +39,9 @@ ol_ :: [Structure] -> Structure
 ol_ =
   Structure . el "ol" . concatMap (el "li" . getStructureString)
 
-append_ :: Structure -> Structure -> Structure
-append_ c1 c2 =
-  Structure (getStructureString c1 <> getStructureString c2)
+instance Semigroup Structure where
+  (<>) c1 c2 =
+    Structure (getStructureString c1 <> getStructureString c2)
 
 -- Render
 
