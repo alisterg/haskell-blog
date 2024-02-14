@@ -8,7 +8,7 @@ myHtml =
   html_
     "Homepage"
     ( (<>)
-        (h1_ "<<Heading \"")
+        (h_ 1 "<<Heading \"")
         ( (<>)
             (p_ "Paragraph 1")
             (p_ "Paragraph 2")
