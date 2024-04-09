@@ -1,4 +1,4 @@
-# My blog
+# Static site generator
 
 # Features
 
